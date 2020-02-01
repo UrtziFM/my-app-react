@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CounterCard from './components/counter/view'
 import CounterCardHook from './components/counterwithhook';
+import CounterCardReducer from './components/counterwithreducer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </header>
       <CounterCard/>
       <CounterCardHook/>
+      <CounterCardReducer/>
     </div>
   );
 }
