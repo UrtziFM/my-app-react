@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CounterCard from './components/counter/view'
+import CounterCardHook from './components/counterwithhook';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </a>
       </header>
       <CounterCard/>
+      <CounterCardHook/>
     </div>
   );
 }
