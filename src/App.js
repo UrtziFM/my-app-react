@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CounterCard from './components/counter/view'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <CounterCard/>
     </div>
   );
 }
