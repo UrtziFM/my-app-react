@@ -1,32 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+
 import './App.css';
-import CounterCard from './components/counter/view'
-import CounterCardHook from './components/counterwithhook';
-import CounterCardReducer from './components/counterwithreducer';
+
+import Home from './containers/Home';
+import Pokemon from './containers/Pokemon';
+import PokemonProfile from './containers/PokemonProfile';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <CounterCard/>
-      <CounterCardHook/>
-      <CounterCardReducer/>
-    </div>
-  );
+    <Router>
+    <Switch>
+      <Route path="/pokemon" exact component={Pokemon} />
+      <Route path="/pokemon/:id" exact component={PokemonProfile} />
+      <Route path="/" component={Home} />
+    </Switch>
+  </Router>
+  )
+
 }
 
 export default App;
