@@ -7,6 +7,7 @@ function Pokemon() {
     const [pokemonList, setPokemonList] = useState([]);
 
     function addNewPokemon(pokemon) {
+       
         setPokemonList([...pokemonList, pokemon]);
     }
 
@@ -17,7 +18,7 @@ function Pokemon() {
                 initialCounter= { pokemonList.length }
                 onFetch= { addNewPokemon }
             />
-            <PokemonList list={ PokemonList } />
+            <PokemonList list={ pokemonList } />
         </div>
     );
 }
